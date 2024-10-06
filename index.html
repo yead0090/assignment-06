@@ -74,18 +74,37 @@
         <div class=" text-start ">
             <p class="font-bold text-xl">Best Deal For You</p>
         </div>
-        <div id="bdfy" class=" relative w-full">
-            <div id="card-container" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5  w-9/12 mt-5 ">
+        <div id="bdfy" class="w-full border border-blue-500 grid grid-cols-12 lg:flex-row">
+            <div id="card-container"
+                class="grid lg:grid-cols-3 md:grid-cols-2   border border-amber-500  col-span-8 sm:grid-cols-1 gap-5 h-full w-full mt-5 ">
 
             </div>
-            
+
             <!-- sidebar -->
-            <div id="right-bar" class="overflow-scroll grid grid-cols-2 border border-b-amber-200 p-4 absolute right-0 top-0  w-3/12 h-full">
-                
-                 
-                
+            <div id="right-bar"
+                class="mt-5 overflow-y-scroll grid grid-cols-2 col-span-4 border border-amber-500 right-0 top-0 h-full w-full">
+
+
+
             </div>
         </div>
+
+        <!-- modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div id="modal-box" class="modal-box">
+                <div id="modal-details">
+                    
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
     <script src="js.js"></script>
 </body>

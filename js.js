@@ -53,7 +53,7 @@ const viewPets = (pets) => {
     <div class="card-actions flex flex-row justify-between">
         <button onclick="(loadById('${p.petId}'))" class="btn px-3"><i class="fa-regular fa-thumbs-up"></i></button>
         <button class="btn px-3">Adopt</button>
-        <button class="btn px-3">Details</button>
+        <button onclick="loadForModalById(${p.petId})" class="btn px-3">Details</button>
 
     </div>
   </div>
@@ -66,7 +66,43 @@ const viewPets = (pets) => {
 
 
 }
+
+
 loadPets('pets')
+
+
+
+
+// load for modal by id 
+const loadForModalById = (id)=>{
+    fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`)
+    .then(res => res.json())
+    .then(data => ModalDetails(data.petData))
+}
+
+
+// details in modal
+const ModalDetails = (data) => {
+    
+    
+    document.getElementById("my_modal_5").showModal()
+    const modalDetailsDiv = document.getElementById("modal-details")
+    modalDetailsDiv.innerHTML="";
+    const div = document.createElement("div")
+       div.innerHTML=`<img src="${data.image}" alt="">
+       <p class="font-bold text-2xl">${data.pet_name}</p>
+       <p>${data.breed}</p>
+       <p>${data.gender}</p>
+       <p>${data.vaccinated_status}</p>
+       <p>${data.date_of_birth}</p>
+       <p>${data.price}</p>
+       <p class="font-bold text-base">Details Information</p>
+       <p>${data.pet_details}</p>
+
+
+       `
+       modalDetailsDiv.appendChild(div)
+}
 
 // active button
 
@@ -117,12 +153,12 @@ const loadById = (id) => {
 }
 // likeditems
 const likedItems = (obj) => {
-   
+    console.log(obj.image)
     const rightBar = document.getElementById("right-bar")
-    const likedDiv = document.createElement("div")
-    likedDiv.classList.add("border","border-red-500",)
-    likedDiv.innerHTML = `<img src="${obj.image}" alt="">`
-     rightBar.appendChild(likedDiv)
-     
-}
+    const img = document.createElement("img")
+    img.classList.add("border", "border-red-500",)
+    img.src = `${obj.image}`
 
+    rightBar.append(img)
+
+}
