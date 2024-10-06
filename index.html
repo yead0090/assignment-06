@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pets</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="flex">
+                    <img src="./images/logo.webp" alt="">
+                    <p class="font-bold text-xl">
+                        Peddy
+                    </p>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a class="flex gap-2 font-bold text-xl">
+                    <p>Home</p>
+                    <p>Shop</p>
+                    <p>Contact</p>
+                </a>
+            </div>
+            <div class="navbar-end">
+                <img class="border border-blue-300 rounded-full" src="./images/user-128-32.png" alt="">
+
+
+            </div>
+        </div>
+
+    </nav>
+    <header class="text-center mt-10">
+        <p class="text-xl font-bold text-[#464141d2] m-3">
+            Bringing Families Together
+        </p>
+        <p class="m-3 text-6xl font-bold">
+            Your Path to Adoption <br>Starts Here
+        </p>
+        <p class="m-3 font-medium">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+        <button class="btn btn-active btn-neutral"><a href="#main-section">View More</a></button>
+
+        <img class="mx-auto" src="./images/pet.webp" alt="">
+
+    </header>
+    <main id="main-section" class="w-11/12 mx-auto">
+        <div class="text-center">
+            <p class="text-2xl font-bold">Adopt Your Best Friend</p>
+            <p class="font-bold">It is a long established fact that a reader will be distracted by the readable content
+                of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+
+        <div class=" my-10  gap-4 flex flex-col lg:flex-row justify-between">
+            <button id="Dogs-btn" class="btn  px-14  font-bold text-xl">🐶 Dogs</button>
+            <button id="Cats-btn" class="btn px-14  font-bold text-xl">🐱 Cats</button>
+            <button id="Rabbits-btn" class="btn px-14  font-bold text-xl">🐰 Rabbits</button>
+            <button id="Birds-btn" class="btn px-14  font-bold text-xl">🐦 Birds</button>
+        </div>
+
+        <div class=" text-start ">
+            <p class="font-bold text-xl">Best Deal For You</p>
+        </div>
+        <div id="bdfy" class=" relative w-full">
+            <div id="card-container" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5  w-9/12 mt-5 ">
+
+            </div>
+            
+            <!-- sidebar -->
+            <div id="right-bar" class="overflow-scroll grid grid-cols-2 border border-b-amber-200 p-4 absolute right-0 top-0  w-3/12 h-full">
+                
+                 
+                
+            </div>
+        </div>
+    </main>
+    <script src="js.js"></script>
+</body>
+
+<footer class="footer mt-14 flex flex-col lg:flex-row  justify-around bg-[#13131370] text-base-content p-10">
+    <nav>
+        <div class="flex">
+            <img src="./images/logo.webp" alt="">
+            <p class="font-bold text-xl">
+                Peddy
+            </p>
+        </div>
+        <a class="link link-hover">Location: av. Washington 165, NY CA </a>
+        <a class="link link-hover">54003</a>
+        <a class="link link-hover">
+            Phone: +31 85 964 47 25
+        </a>
+        <a class="link link-hover">
+            Email: info@yourdomain.com
+        </a>
+        <a class="link link-hover">
+
+            Openings hours: 9.00 AM - 5.00 PM
+        </a>
+        <div class="flex flex-row gap-2 ">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Useful Links</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About Us</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+    </nav>
+
+    <form>
+        <h6 class="footer-title">Drop a Message</h6>
+        <fieldset class="form-control w-80">
+            <label class="label">
+                <span class="label-text"></span>
+            </label>
+            <div class="flex flex-col gap-3">
+                <input type="text" placeholder="Enter your email" class="input input-bordered join-item" />
+                <button class="btn border-none bg-gray-500 ">Subscribe</button>
+            </div>
+        </fieldset>
+    </form>
+</footer>
+
+
+</html>
