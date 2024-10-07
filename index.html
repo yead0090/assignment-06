@@ -16,7 +16,7 @@
 
 <body>
     <!-- navbar -->
-    <nav>
+    <nav class="w-11/12  mx-auto">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="flex">
@@ -52,12 +52,15 @@
             It is a long established fact that a reader will be distracted by the readable content of a page when
             looking <br> at its layout. The point of using Lorem Ipsum is that it has a.
         </p>
-        <button class="btn btn-active btn-neutral"><a href="#main-section">View More</a></button>
+
+        <a href="#main-section"><button class="btn btn-active btn-neutral">View More</button></a>
+
 
         <img class="mx-auto" src="./images/pet.webp" alt="">
 
     </header>
-    <main id="main-section" class="w-11/12 mx-auto">
+
+    <main id="main-section" class="w-11/12 mx-auto lg:w-9/12">
         <div class="text-center">
             <p class="text-2xl font-bold">Adopt Your Best Friend</p>
             <p class="font-bold">It is a long established fact that a reader will be distracted by the readable content
@@ -71,31 +74,42 @@
             <button id="Birds-btn" class="btn px-14  font-bold text-xl">🐦 Birds</button>
         </div>
 
-        <div class=" text-start ">
+        <div class=" text-start flex justify-between">
             <p class="font-bold text-xl">Best Deal For You</p>
+            <button id="sort-btn" class="btn font-bold text-white bg-slate-800">Sort By Price</button>
         </div>
-        <div id="bdfy" class="w-full border border-blue-500 grid grid-cols-12 lg:flex-row">
+
+        <!-- spinner -->
+        <div id="spinner" class=" hidden text-center">
+            <span class="loading loading-bars loading-lg  "></span>
+        </div>
+
+
+
+        <div id="bdfy" class="w-full  grid grid-cols-12 gap-4">
+
+
             <div id="card-container"
-                class="grid lg:grid-cols-3 md:grid-cols-2   border border-amber-500  col-span-8 sm:grid-cols-1 gap-5 h-full w-full mt-5 ">
+                class="grid lg:grid-cols-3 md:grid-cols-2   col-span-8 sm:grid-cols-1 gap-5 h-full w-full mt-5 ">
 
             </div>
 
             <!-- sidebar -->
-            <div id="right-bar"
-                class="mt-5 overflow-y-scroll grid grid-cols-2 col-span-4 border border-amber-500 right-0 top-0 h-full w-full">
+            <div class="mt-5 overflow-hidden col-span-4 border border-gray-500 rounded-xl right-0 top-0 h-full w-full">
 
+                <div id="right-bar" class="grid grid-cols-2 ">
 
+                </div>
 
             </div>
         </div>
 
         <!-- modal -->
         <!-- Open the modal using ID.showModal() method -->
-        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
             <div id="modal-box" class="modal-box">
                 <div id="modal-details">
-                    
+
                 </div>
                 <div class="modal-action">
                     <form method="dialog">
@@ -105,8 +119,27 @@
                 </div>
             </div>
         </dialog>
+
+        <!-- modal2 -->
+        <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
+            <div id="modal-box2" class="modal-box">
+                <div id="modal-details2">
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button id="modal-close" class="btn hidden">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
     <script src="js.js"></script>
+    <script src="2.js"></script>
+
+
+
 </body>
 
 <footer class="footer mt-14 flex flex-col lg:flex-row  justify-around bg-[#13131370] text-base-content p-10">
