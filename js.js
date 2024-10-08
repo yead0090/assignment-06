@@ -166,7 +166,6 @@ const loadById = (id) => {
 }
 // likeditems
 const likedItems = (obj) => {
-    console.log(obj.image)
     const rightBar = document.getElementById("right-bar")
     const img = document.createElement("img")
     img.classList.add("p-2", "rounded-xl", "border", "border-gray-500")
