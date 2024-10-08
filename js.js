@@ -56,10 +56,10 @@ const viewPets = (pets) => {
     <p>Birth: ${p.date_of_birth ? p.date_of_birth : "Not Available"}</p>
     <p>Gender: ${p.gender ? p.gender : "Not Available"}</p>
     <p>Price: ${p.price ? p.price : "Not Available"}$</p>
-    <div class="card-actions flex flex-row justify-between">
-        <button onclick="(loadById('${p.petId}'))" class="btn px-3"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button onclick="adoptBtn()" class="btn px-3">Adopt</button>
-        <button onclick="loadForModalById(${p.petId})" class="btn px-3">Details</button>
+    <div class="card-actions flex flex-row  ">
+        <button onclick="(loadById('${p.petId}'))" class="btn btn-xs"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button onclick="adoptBtn()" class="btn btn-xs">Adopt</button>
+        <button onclick="loadForModalById(${p.petId})" class="btn btn-xs">Details</button>
 
     </div>
   </div>
@@ -122,36 +122,36 @@ const birdsButton = document.getElementById("Birds-btn")
 
 dogsButton.addEventListener("click", function () {
 
-    dogsButton.classList.add("rounded-full")
-    catsButton.classList.remove("rounded-full")
-    rabbitsButton.classList.remove("rounded-full")
-    birdsButton.classList.remove("rounded-full")
+    dogsButton.classList.add("rounded-full","border","border-gray-500")
+    catsButton.classList.remove("rounded-full","border","border-gray-500")
+    rabbitsButton.classList.remove("rounded-full","border","border-gray-500")
+    birdsButton.classList.remove("rounded-full","border","border-gray-500")
     cardContainer.innerHTML = "";
     loadSpinner("Dog")
 
 })
 catsButton.addEventListener("click", function () {
-    dogsButton.classList.remove("rounded-full")
-    catsButton.classList.add("rounded-full")
-    rabbitsButton.classList.remove("rounded-full")
-    birdsButton.classList.remove("rounded-full")
+    dogsButton.classList.remove("rounded-full","border","border-gray-500")
+    catsButton.classList.add("rounded-full","border","border-gray-500")
+    rabbitsButton.classList.remove("rounded-full","border","border-gray-500")
+    birdsButton.classList.remove("rounded-full","border","border-gray-500")
     cardContainer.innerHTML = "";
     loadSpinner("Cat")
 })
 rabbitsButton.addEventListener("click", function () {
-    dogsButton.classList.remove("rounded-full")
-    catsButton.classList.remove("rounded-full")
-    rabbitsButton.classList.add("rounded-full")
-    birdsButton.classList.remove("rounded-full")
+    dogsButton.classList.remove("rounded-full","border","border-gray-500")
+    catsButton.classList.remove("rounded-full","border","border-gray-500")
+    rabbitsButton.classList.add("rounded-full","border","border-gray-500")
+    birdsButton.classList.remove("rounded-full","border","border-gray-500")
     cardContainer.innerHTML = "";
 
     loadSpinner("Rabbit")
 })
 birdsButton.addEventListener("click", function () {
-    dogsButton.classList.remove("rounded-full")
-    catsButton.classList.remove("rounded-full")
-    rabbitsButton.classList.remove("rounded-full")
-    birdsButton.classList.add("rounded-full")
+    dogsButton.classList.remove("rounded-full","border","border-gray-500")
+    catsButton.classList.remove("rounded-full","border","border-gray-500")
+    rabbitsButton.classList.remove("rounded-full","border","border-gray-500")
+    birdsButton.classList.add("rounded-full","border","border-gray-500")
     cardContainer.innerHTML = "";
 
     loadSpinner("Bird")
@@ -243,7 +243,4 @@ const adoptBtn = () => {
 
 }
 
-const timerfunction = () => {
 
-
-}
